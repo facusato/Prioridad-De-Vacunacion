@@ -17,16 +17,14 @@
                 (printout t "   1 - Asma " crlf)
                 (printout t "   2 - Fibrosis Pulmonar " crlf)
                 (printout t "   3 - Neumonia " crlf)
-		(printout t "   4 - Amigdalitis " crlf)
-                (printout t "   5 - Ninguna " crlf)
+                (printout t "   4 - Ninguna " crlf)
                 (bind ?enfermedad (read))
                 (printout t "ingresaste:") (printout t ?enfermedad crlf)
 
         (if (= ?enfermedad 1) then (assert (Enfermedad (Nombre "Asma") (Tipo "Respiratoria Moderada"))))
         (if (= ?enfermedad 2) then (assert (Enfermedad (Nombre "Fibrosis Quistica")(Tipo "Respiratoria Grave"))))
         (if (= ?enfermedad 3) then (assert (Enfermedad (Nombre "Neumonia")(Tipo "Respiratoria Grave"))))
-	(if (= ?enfermedad 4) then (assert (Enfermedad (Nombre "Amigdalitis")(Tipo "Respiratoria Leve"))))
-        (if (= ?enfermedad 5) then (assert (Enfermedad (Nombre "Ninguna")(Tipo ""))))
+        (if (= ?enfermedad 4) then (assert (Enfermedad (Nombre "Ninguna")(Tipo ""))))
 
 	(printout t "Indique si curso/a alguna de estas enfermedades Cardiacas:" crlf) 
                 (printout t "   1 - Miocardiopatia " crlf)

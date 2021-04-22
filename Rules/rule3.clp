@@ -1,3 +1,9 @@
+(defrule Prioridad_Urgente ""
+        (exists (Prioridad (Nombre "Urgente")))
+        =>
+        (printout t "Su Prioridad para vacunacion es: Urgente" crlf)
+)
+
 (defrule Prioridad_Alta ""
         (exists (Prioridad (Nombre "Alta")))
         =>
@@ -14,4 +20,10 @@
         (exists (Prioridad (Nombre "Baja")))
         =>
         (printout t "Su Prioridad para vacunacion es: Baja" crlf)
+)
+
+(defrule Prioridad_MuyBaja ""
+        (exists (Prioridad (Nombre "Muy Baja")))
+        =>
+        (printout t "Su Prioridad para vacunacion es: Muy Baja" crlf)
 )

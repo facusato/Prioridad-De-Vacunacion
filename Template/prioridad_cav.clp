@@ -1,4 +1,4 @@
 (deftemplate Prioridad
         (field Numero)
-	(field Nombre)
+	(multifield Nombre)
         (field Descripcion))
