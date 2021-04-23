@@ -1,7 +1,7 @@
 (defrule definir_Prioridad ""
         =>
         (printout t "Seleccione el grupo poblacional al cual pertenece:" crlf) 
-                (printout t "   1 - Adultos mayores de 70 o Viven en residencia de la 3er edad" crlf)
+                (printout t "   1 - Adultos mayores de 70 o Vive en residencia de la 3er edad" crlf)
                 (printout t "   2 - Entre 60 y 70 " crlf)
                 (printout t "   3 - Entre 18 y 59 con factores de riesgo " crlf)
                 (printout t "   4 - Entre 18 y 59 sin factores de riesgo " crlf)
@@ -13,7 +13,7 @@
         (if (= ?grupoPoblacional 3) then (assert (Edad (Clasificacion "Adulto Mayor Joven con Riesgo"))))
         (if (= ?grupoPoblacional 4) then (assert (Edad (Clasificacion "Adulto Mayor Joven sin Riesgo"))))
 
- 	(printout t "Indique si curso/a alguna de estas enfermedades Respiratorias:" crlf) 
+ 	(printout t "Indique si curso/a alguna de estas enfermedades:" crlf) 
                 (printout t "   1 - Asma " crlf)
                 (printout t "   2 - Fibrosis Pulmonar " crlf)
                 (printout t "   3 - Neumonia " crlf)
@@ -21,12 +21,12 @@
                 (bind ?enfermedad (read))
                 (printout t "ingresaste:") (printout t ?enfermedad crlf)
 
-        (if (= ?enfermedad 1) then (assert (Enfermedad (Nombre "Asma") (Tipo "Respiratoria Moderada"))))
-        (if (= ?enfermedad 2) then (assert (Enfermedad (Nombre "Fibrosis Quistica")(Tipo "Respiratoria Grave"))))
-        (if (= ?enfermedad 3) then (assert (Enfermedad (Nombre "Neumonia")(Tipo "Respiratoria Grave"))))
-        (if (= ?enfermedad 4) then (assert (Enfermedad (Nombre "Ninguna")(Tipo ""))))
+        (if (= ?enfermedad 1) then (assert (Enfermedad (Nombre "Asma") (Tipo "Respiratoria"))))
+        (if (= ?enfermedad 2) then (assert (Enfermedad (Nombre "Fibrosis Quistica")(Tipo "Respiratoria"))))
+        (if (= ?enfermedad 3) then (assert (Enfermedad (Nombre "Neumonia")(Tipo "Respiratoria"))))
+        (if (= ?enfermedad 4) then (assert (Enfermedad (Nombre "Ninguna")(Tipo "NingunaR"))))
 
-	(printout t "Indique si curso/a alguna de estas enfermedades Cardiacas:" crlf) 
+	(printout t "Indique si curso/a alguna de estas enfermedades:" crlf) 
                 (printout t "   1 - Miocardiopatia " crlf)
                 (printout t "   2 - Hipertension Pulmonar " crlf)
                 (printout t "   3 - Insuficiencia Cardiaca " crlf)
@@ -37,9 +37,9 @@
         (if (= ?enfermedad 1) then (assert (Enfermedad (Nombre "Miocardiopatia") (Tipo "Cardiaca"))))
         (if (= ?enfermedad 2) then (assert (Enfermedad (Nombre "Hipertension Pulmonar")(Tipo "Cardiaca"))))
         (if (= ?enfermedad 3) then (assert (Enfermedad (Nombre "Insuficiencia Cardiaca")(Tipo "Cardiaca"))))
-        (if (= ?enfermedad 4) then (assert (Enfermedad (Nombre "Ninguna")(Tipo ""))))
+        (if (= ?enfermedad 4) then (assert (Enfermedad (Nombre "Ninguna")(Tipo "NingunaC"))))
 
-	(printout t "Indique si curso/a alguno de estas enfermedades Cronicas:" crlf) 
+	(printout t "Indique si curso/a alguna de estas enfermedades:" crlf) 
                 (printout t "   1 - Diabetes (Tipo 1 y 2)" crlf)
                 (printout t "   2 - Obesidad Grado 3" crlf)
 		(printout t "   3 - VIH " crlf)
@@ -51,8 +51,8 @@
         (if (= ?enfermedad 1) then (assert (Enfermedad (Nombre "Diabetes") (Tipo "Cronica"))))
         (if (= ?enfermedad 2) then (assert (Enfermedad (Nombre "Obesidad")(Tipo "Cronica"))))
         (if (= ?enfermedad 3) then (assert (Enfermedad (Nombre "VIH")(Tipo "Cronica"))))
-	(if (= ?enfermedad 4) then (assert (Enfermedad (Nombre "Epoc")(Tipo "Cronica Grave"))))
-        (if (= ?enfermedad 5) then (assert (Enfermedad (Nombre "Ninguna")(Tipo ""))))
+	(if (= ?enfermedad 4) then (assert (Enfermedad (Nombre "Epoc")(Tipo "Cronica"))))
+        (if (= ?enfermedad 5) then (assert (Enfermedad (Nombre "Ninguna")(Tipo "NingunaCr"))))
 
 	(printout t "Indique si realiza alguna de estas actividades laborales:" crlf) 
                 (printout t "   1 - Personal de salud " crlf)

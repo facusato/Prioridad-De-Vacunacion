@@ -4,6 +4,7 @@
         (printout t "Su Prioridad para vacunacion es: Urgente" crlf)
 )
 
+
 (defrule Prioridad_Alta ""
         (exists (Prioridad (Nombre "Alta")))
         =>
