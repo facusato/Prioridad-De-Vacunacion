@@ -28,3 +28,5 @@
         =>
         (printout t "Su Prioridad para vacunacion es: Muy Baja" crlf)
 )
+
+
